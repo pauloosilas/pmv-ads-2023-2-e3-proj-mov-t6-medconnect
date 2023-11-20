@@ -84,7 +84,7 @@ export const DashboardScreen = ({navigation, route} :Props) => {
             />   
 
             <MenuIcon 
-              onPress={() => navigation.navigate("AppointmentHistory")}
+              onPress={() => navigation.navigate("PDF")}
               icon={require('../../assets/images/lungs.png')}
               category={"Exames"}
               background={"#e3ebeb"}  

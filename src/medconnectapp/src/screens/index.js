@@ -8,4 +8,5 @@ export * from "./Specialist";
 export * from "./Appointment";
 export * from "./AppointmentHistory";
 export * from "./Feedback";
-export * from "./Chat"
+export * from "./Chat";
+export * from "./ListaRemedios"

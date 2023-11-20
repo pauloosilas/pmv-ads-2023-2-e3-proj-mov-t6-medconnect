@@ -37,6 +37,9 @@ export const CardHistory = ({consulta, especialista}: Prop) => {
             <TouchableOpacity onPress={()=> navigation.navigate("AppointmentCall",{especialista:especialista})} style={styles.cardContainer.cardSpecBtnView}>
                 <Text style={styles.cardContainer.cardSpecBtnViewText}>Visualizar</Text>
             </TouchableOpacity>
+            <TouchableOpacity  style={[styles.cardContainer.cardSpecBtnView,  {backgroundColor: "#942e2e"}]}>
+                <Text style={styles.cardContainer.cardSpecBtnViewText}>Cancelar</Text>
+            </TouchableOpacity> 
           </View>
           )
           :

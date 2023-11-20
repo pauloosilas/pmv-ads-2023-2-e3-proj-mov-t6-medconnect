@@ -19,16 +19,18 @@ export const styles = StyleSheet.create({
             }
         },
         cardSpecBtnView: {
-            width: 70,
+            width: 60,
             height: 20,
             backgroundColor: globalStyles.primaryColor,
             alignItems: "center",
             justifyContent: "center",
             alignSelf: "flex-end",
-            bottom: 0,
-            left: "-75%",
+            bottom: -10,
+            left: "-110%",
             borderRadius: 3,
-          },
+            marginLeft: 2,
+        },
+        cardSpecBtnCancel:{},
           cardSpecBtnViewText: {
             color: "#FFF",
             fontSize: 10,
