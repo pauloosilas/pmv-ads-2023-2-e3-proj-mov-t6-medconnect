@@ -1,0 +1,130 @@
+import { useState } from "react";
+import {View,Text,Image,TouchableOpacity, TextInput, SafeAreaView, ScrollView, Animated, StyleSheet, Dimensions} from "react-native"
+
+import { publicFiles } from "../../../config/env"
+import { useAuth } from "../../hooks/useAuth"
+
+import { HeaderContainer } from "../../components/header/HeaderContainer";
+import { DrawerScreenProps } from "@react-navigation/drawer";
+import { launchImageLibrary } from "react-native-image-picker";
+
+import { styles } from './../Search/styles';
+
+interface Props extends DrawerScreenProps<any, any>{}
+
+const widthScreen = Dimensions.get("screen").width
+const heightScreen = Dimensions.get("screen").height
+
+export const Settings = ({navigation, route}: Props) => {
+
+  let options = {
+    storageOptions:{
+      path:"image"
+    }
+  };
+
+  const [scrollY, setScrollY] = useState(new Animated.Value(0))
+  const {user} = useAuth();
+
+  const openGallery = async () => {
+    launchImageLibrary(options, response => {
+      console.log(response)
+    })
+  }
+
+  return (
+      
+            
+        <SafeAreaView>
+            <View style={styles.container}>
+            <ScrollView
+                scrollEventThrottle={16}
+                onScroll={Animated.event([{
+                  nativeEvent:{
+                    contentOffset: {y : scrollY}
+                  }
+                }],
+                { useNativeDriver: false}
+                )}
+            >
+            
+              <Animated.View style={
+                [styles.header,
+                  {
+                    height: scrollY.interpolate({
+                      inputRange: [20,200,250],
+                      outputRange:[125,10,0],
+                      extrapolate: 'clamp'
+                    }),
+                    opacity:scrollY.interpolate({
+                      inputRange: [1,20,150],
+                      outputRange: [1,1,0],
+                      extrapolate: 'clamp'
+                    })
+                  }
+              ]}>
+                <HeaderContainer route={route} navigation={navigation}>          
+                </HeaderContainer>  
+              
+              </Animated.View>
+          
+          <View style={{}}>
+                        
+                  <View style={st.profileImgContainer}>
+                      <Image 
+                          source={{uri: `${publicFiles}/${user.fotoPerfil}`}}
+                          style={st.profileImg} 
+                      />               
+                  </View>
+                  <TouchableOpacity
+                    onPress={() => openGallery()}
+                  >
+                    <Text>Alterar Foto...</Text>
+                  </TouchableOpacity>
+                  <Text>{user.nome} {user.sobrenome}</Text>  
+
+                <View>
+                  <TextInput
+                    style={st.inputPass}
+                    placeholder="Senha"
+                  />
+                  
+                  <TextInput
+                    style={st.inputPass}
+                    placeholder="Confirmar Senha"
+                  />  
+                </View>
+            </View>
+            
+       
+       </ScrollView>
+      </View>
+    </SafeAreaView>
+  )
+}
+
+
+const st = StyleSheet.create({
+ 
+  profileImgContainer: {
+      width: widthScreen * 0.3,
+      height: widthScreen * 0.3,
+      backgroundColor: '#999',
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderRadius:  widthScreen * 0.2,
+      zIndex:10
+    },
+    profileImg: {
+      width: widthScreen * 0.3,
+      height: widthScreen * 0.3,
+      borderRadius:  widthScreen * 0.2,
+      zIndex:10
+    },
+
+    inputPass:{
+      width: "90%",
+      height: heightScreen * 0.07,
+      borderWidth: 1,
+    }
+})

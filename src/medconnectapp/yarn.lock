@@ -6109,6 +6109,11 @@ react-native-calendars@^1.1301.0:
     lodash "^4.17.21"
     prop-types "^15.7.2"
 
+react-native-image-picker@^7.0.3:
+  version "7.0.3"
+  resolved "https://registry.npmjs.org/react-native-image-picker/-/react-native-image-picker-7.0.3.tgz"
+  integrity sha512-mFbu8AzZ8tysO7xHsQ+TmxYYJYaBCL66s4AujjgCBEAyTufm2nhjhVOw2uq1zvMDVtGoyekzCJfH3JqVmXK/3w==
+
 react-native-incall-manager@^4.0.1:
   version "4.1.0"
   resolved "https://registry.npmjs.org/react-native-incall-manager/-/react-native-incall-manager-4.1.0.tgz"

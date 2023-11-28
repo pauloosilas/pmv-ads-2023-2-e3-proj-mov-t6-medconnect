@@ -24,6 +24,7 @@
     "react-native-blob-util": "^0.19.4",
     "react-native-calendars": "^1.1301.0",
     "react-native-gesture-handler": "~2.12.0",
+    "react-native-image-picker": "^7.0.3",
     "react-native-incall-manager": "^4.0.1",
     "react-native-masked-text": "^1.13.0",
     "react-native-pdf": "^6.7.3",
