@@ -32,8 +32,6 @@ export const AppointmentHistory = ({navigation, route} :Props) => {
     let response = await especialistaController.getOne(eId) 
     setEspecialistas([...especialistas, response])
   }
- 
-  console.log(consultas)
 
  useEffect(() => {
   

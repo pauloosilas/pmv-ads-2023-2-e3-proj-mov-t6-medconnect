@@ -10,3 +10,4 @@ export * from "./AppointmentHistory";
 export * from "./Feedback";
 export * from "./Chat";
 export * from "./ListaRemedios"
+export * from "./pdf"

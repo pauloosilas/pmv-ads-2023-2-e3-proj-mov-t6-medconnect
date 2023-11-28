@@ -35,6 +35,19 @@ export const styles = StyleSheet.create({
             color: "#FFF",
             fontSize: 10,
           },
+
+          cancelada: {
+            width: 80,
+            height: 20,
+            color: "#9c405a",
+            alignItems: "center",
+            justifyContent: "center",
+            alignSelf: "flex-end",
+            bottom: -10,
+            left: "-50%",
+            borderRadius: 3,
+            marginLeft: 2,
+        },
     },
 
     
