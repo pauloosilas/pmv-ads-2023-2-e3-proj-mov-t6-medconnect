@@ -33,6 +33,8 @@ export const AppointmentHistory = ({navigation, route} :Props) => {
     setEspecialistas([...especialistas, response])
   }
  
+  console.log(consultas)
+
  useEffect(() => {
   
     (async() => {

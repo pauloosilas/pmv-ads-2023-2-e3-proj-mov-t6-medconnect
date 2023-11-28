@@ -10,7 +10,8 @@ namespace medconnect.API.Models
         public Guid ConsultaId { get; set; }
         public string? UsuarioId { get; set; }
         public string EspecialistaId { get; set; }
-        public DateTime DataConsulta { get; set; }  
+        public DateTime DataConsulta { get; set; }
+        public bool? isAtiva { get; set; } = true;
 
     }
 }

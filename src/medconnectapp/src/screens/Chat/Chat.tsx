@@ -4,7 +4,7 @@ import { HubConnection, HubConnectionBuilder } from '@microsoft/signalr';
 import Icon  from "react-native-vector-icons/Ionicons";
 import { useAuth } from "../../hooks/useAuth";
 import { styles } from "./Styles";
-import { publicFiles } from "../../../config/env";
+import { IP_SERVER, publicFiles } from "../../../config/env";
 
 export const ChatScreen = () => {
   const {user} = useAuth()
@@ -17,7 +17,7 @@ export const ChatScreen = () => {
 
   useEffect(() => {
     const connection = new HubConnectionBuilder()
-    .withUrl('http://192.168.1.6:5000/chat')
+    .withUrl(`http://${IP_SERVER}:5000/chat`)
     .build();
     
     

@@ -182,6 +182,9 @@ namespace medconnect.API.Migrations
                     b.Property<string>("UsuarioId")
                         .HasColumnType("varchar(255)");
 
+                    b.Property<bool?>("isAtiva")
+                        .HasColumnType("tinyint(1)");
+
                     b.HasKey("ConsultaId");
 
                     b.HasIndex("UsuarioId");

@@ -8,5 +8,6 @@ namespace medconnect.API.Repository.interfaces
         Task<T> GetById(Expression<Func<T, bool>> predicate);
         IQueryable<T> GetGetAllByUserId(Expression<Func<T, bool>> predicate);
         void Add(T entity); 
+        void Update(T entity);
     }
 }

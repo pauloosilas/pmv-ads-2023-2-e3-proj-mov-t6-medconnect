@@ -33,5 +33,11 @@ namespace medconnect.API.Repository
         {
             _context.Set<T>().Add(entity); 
         }
+
+        public void Update(T entity)
+        {
+            _context.Entry(entity).State = EntityState.Modified;
+            _context.Set<T>().Update(entity);
+        }
     }
 }
