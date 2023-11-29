@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {View,Text,Image,TouchableOpacity, TextInput, SafeAreaView, ScrollView, Animated, StyleSheet, Dimensions} from "react-native"
+import {View,Text,Image,TouchableOpacity, TextInput, SafeAreaView, ScrollView, Animated, StyleSheet, Dimensions, Button} from "react-native"
 
 import { publicFiles } from "../../../config/env"
 import { useAuth } from "../../hooks/useAuth"
@@ -10,6 +10,7 @@ import { launchImageLibrary } from "react-native-image-picker";
 import { User } from "../../api";
 import { imgFormat } from "../../utils";
 import { styles } from './../Search/styles';
+import { ButtonPrimary } from "../../components/Buttons";
 
 interface Props extends DrawerScreenProps<any, any>{}
 
@@ -87,7 +88,7 @@ export const Settings = ({navigation, route}: Props) => {
               
               </Animated.View>
           
-          <View style={{}}>
+          <View style={st.container}>
                         
                <View style={st.profileImgContainer}>
                 <Image 
@@ -98,11 +99,14 @@ export const Settings = ({navigation, route}: Props) => {
               <TouchableOpacity
                 onPress={() => openGallery()}
               >
-                <Text>Alterar Foto...</Text>
+                <Text>Alterar Foto</Text>
               </TouchableOpacity>
               <Text>{user.nome} {user.sobrenome}</Text>  
 
-                <View>
+                <View style={st.inputs}>
+                  
+                  <Text style={st.inputs.titleInputs}>Alterar Senha</Text>
+                
                   <TextInput
                     style={st.inputPass}
                     placeholder="Senha"
@@ -112,7 +116,12 @@ export const Settings = ({navigation, route}: Props) => {
                     style={st.inputPass}
                     placeholder="Confirmar Senha"
                   />  
+                   <ButtonPrimary 
+               onPress={() => {}}
+               textButton='ALTERAR SENHA'/>
+               
                 </View>
+
             </View>
             
        
@@ -124,7 +133,10 @@ export const Settings = ({navigation, route}: Props) => {
 
 
 const st = StyleSheet.create({
- 
+ container:{
+  alignItems: "center",
+  width: "100%", 
+ },
   profileImgContainer: {
       width: widthScreen * 0.3,
       height: widthScreen * 0.3,
@@ -142,8 +154,25 @@ const st = StyleSheet.create({
     },
 
     inputPass:{
-      width: "90%",
+      width: "100%",
       height: heightScreen * 0.07,
       borderWidth: 1,
-    }
+    
+    },
+
+    inputs:{
+      width: "100%",
+      gap:10, 
+      marginTop:heightScreen*0.05,
+      justifyContent:"center",
+      alignItems: "center",
+      paddingHorizontal: widthScreen*0.05,
+      
+
+      titleInputs:{
+        alignSelf:"flex-start",
+        fontSize: widthScreen * 0.05,
+        fontWeight: "500"
+      }
+    },
 })

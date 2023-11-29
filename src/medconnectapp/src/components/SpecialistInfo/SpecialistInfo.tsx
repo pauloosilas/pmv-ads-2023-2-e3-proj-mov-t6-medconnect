@@ -13,16 +13,16 @@ type CardData = {
 }
 
 export const SpecialistInfo = (Prop : CardData) => {
- console.log("FOTO",Prop)
+
   return (
     <View style={styles.container}>
         <View style={styles.cardSpecImgContainer}>
-             <Image style={styles.cardSpecImgProfile} source={{uri:`${publicFiles}/${Prop.image}`}} />
+             <Image style={styles.cardSpecImgProfile} source={{uri:`${publicFiles}/${Prop.fotoPerfil}`}} />
         </View>
         <View style={styles.cardSpecInfo}>
-            <Text>{Prop.nome} {Prop.sobrenome} </Text>
-            <Text>{ Prop.descricaoCurta }</Text>
-            <Text>{Prop.categoria}</Text>
+            <Text style={styles.cardTextInfo}>{Prop.nome} {Prop.sobrenome} </Text>
+            <Text style={styles.cardTextInfo}>{ Prop.descricaoCurta }</Text>
+            <Text style={styles.cardTextInfo}>{Prop.categoria}</Text>
         </View>
     </View>
   )

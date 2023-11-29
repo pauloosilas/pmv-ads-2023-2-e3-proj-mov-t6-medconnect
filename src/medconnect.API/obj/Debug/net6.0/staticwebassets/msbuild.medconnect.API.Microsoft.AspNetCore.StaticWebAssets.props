@@ -128,5 +128,133 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\users\rn_image_picker_lib_temp_307d41a0-3760-4a49-9ec8-5384140ead99.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\users\rn_image_picker_lib_temp_56eb4a3c-90d6-4920-a6bb-50c11e04c645.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>medconnect.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/medconnect.API</BasePath>
+      <RelativePath>users/rn_image_picker_lib_temp_56eb4a3c-90d6-4920-a6bb-50c11e04c645.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\users\rn_image_picker_lib_temp_56eb4a3c-90d6-4920-a6bb-50c11e04c645.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\users\rn_image_picker_lib_temp_77d16225-49ea-4a0f-badd-3fc683adec69.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>medconnect.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/medconnect.API</BasePath>
+      <RelativePath>users/rn_image_picker_lib_temp_77d16225-49ea-4a0f-badd-3fc683adec69.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\users\rn_image_picker_lib_temp_77d16225-49ea-4a0f-badd-3fc683adec69.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\users\rn_image_picker_lib_temp_7b001880-84dd-493f-a92a-6e2c43464052.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>medconnect.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/medconnect.API</BasePath>
+      <RelativePath>users/rn_image_picker_lib_temp_7b001880-84dd-493f-a92a-6e2c43464052.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\users\rn_image_picker_lib_temp_7b001880-84dd-493f-a92a-6e2c43464052.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\users\rn_image_picker_lib_temp_82fdf89c-e75d-498d-8c47-6b9adabd17f1.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>medconnect.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/medconnect.API</BasePath>
+      <RelativePath>users/rn_image_picker_lib_temp_82fdf89c-e75d-498d-8c47-6b9adabd17f1.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\users\rn_image_picker_lib_temp_82fdf89c-e75d-498d-8c47-6b9adabd17f1.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\users\rn_image_picker_lib_temp_86032602-66e4-4d6a-865d-682184b605d5.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>medconnect.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/medconnect.API</BasePath>
+      <RelativePath>users/rn_image_picker_lib_temp_86032602-66e4-4d6a-865d-682184b605d5.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\users\rn_image_picker_lib_temp_86032602-66e4-4d6a-865d-682184b605d5.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\users\rn_image_picker_lib_temp_97e99ac3-b374-495e-b746-b0f3904fd579.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>medconnect.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/medconnect.API</BasePath>
+      <RelativePath>users/rn_image_picker_lib_temp_97e99ac3-b374-495e-b746-b0f3904fd579.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\users\rn_image_picker_lib_temp_97e99ac3-b374-495e-b746-b0f3904fd579.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\users\rn_image_picker_lib_temp_d6cb20a5-d710-418a-9131-b9b439cf57f6.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>medconnect.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/medconnect.API</BasePath>
+      <RelativePath>users/rn_image_picker_lib_temp_d6cb20a5-d710-418a-9131-b9b439cf57f6.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\users\rn_image_picker_lib_temp_d6cb20a5-d710-418a-9131-b9b439cf57f6.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\users\rn_image_picker_lib_temp_df8a5505-3aa4-4d2e-b501-8ae4c25a5b57.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>medconnect.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/medconnect.API</BasePath>
+      <RelativePath>users/rn_image_picker_lib_temp_df8a5505-3aa4-4d2e-b501-8ae4c25a5b57.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\users\rn_image_picker_lib_temp_df8a5505-3aa4-4d2e-b501-8ae4c25a5b57.png))</OriginalItemSpec>
+    </StaticWebAsset>
   </ItemGroup>
 </Project>

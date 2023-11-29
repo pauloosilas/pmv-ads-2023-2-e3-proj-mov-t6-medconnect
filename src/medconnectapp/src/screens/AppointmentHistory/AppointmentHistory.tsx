@@ -98,7 +98,9 @@ return (
         <Text>Agendamentos</Text>
         {
           especialistas.map((espec, index) => (
-            <CardHistory key={espec.especialistaId} 
+            <CardHistory key={index} 
+              consultas={consultas}
+              setConsultas={setConsultas}
               consulta={consultas[index]}
               especialista={espec}/>
           ))

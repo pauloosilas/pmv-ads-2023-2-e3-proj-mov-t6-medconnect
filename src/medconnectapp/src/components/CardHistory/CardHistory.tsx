@@ -9,21 +9,36 @@ import { useAuth } from "../../hooks/useAuth"
 
 type Prop = {
   consulta:IConsulta,
-  especialista:IEspecialista
+  especialista:IEspecialista,
+  consultas:IConsulta[],
+  setConsultas: any
 }
 
 const consultaController = new Consulta();
 
-export const CardHistory = ({consulta, especialista}: Prop) => {
+export const CardHistory = ({consulta, especialista, consultas, setConsultas}: Prop) => {
   const {token} = useAuth();
   const navigation = useNavigation() 
+  
+
+  const updateList = (response:IEspecialista) => {
+    let consultas_aux = [];
+    console.table("resposta-->",response)
+    consultas.map(c => (
+      c.especialistaId === response.especialistaId 
+        ? consultas_aux.push(response) 
+        : consultas_aux.push(c)      
+    )) 
     
+  
+    setConsultas(consultas_aux)
+  }
+
   const cancel = async(consultaId: string) => {
     try{
 
       const response = await consultaController.cancel(consultaId , token)
-      console.log("RESposta ",response)
-      
+      updateList(response);    
 
     }catch(error){
       console.log(error)
