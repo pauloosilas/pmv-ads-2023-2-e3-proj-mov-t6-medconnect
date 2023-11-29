@@ -112,5 +112,21 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\personImages\persona07.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\users\rn_image_picker_lib_temp_307d41a0-3760-4a49-9ec8-5384140ead99.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>medconnect.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/medconnect.API</BasePath>
+      <RelativePath>users/rn_image_picker_lib_temp_307d41a0-3760-4a49-9ec8-5384140ead99.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\users\rn_image_picker_lib_temp_307d41a0-3760-4a49-9ec8-5384140ead99.png))</OriginalItemSpec>
+    </StaticWebAsset>
   </ItemGroup>
 </Project>

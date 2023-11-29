@@ -7,7 +7,8 @@ import { useAuth } from "../../hooks/useAuth"
 import { HeaderContainer } from "../../components/header/HeaderContainer";
 import { DrawerScreenProps } from "@react-navigation/drawer";
 import { launchImageLibrary } from "react-native-image-picker";
-
+import { User } from "../../api";
+import { imgFormat } from "../../utils";
 import { styles } from './../Search/styles';
 
 interface Props extends DrawerScreenProps<any, any>{}
@@ -24,12 +25,30 @@ export const Settings = ({navigation, route}: Props) => {
   };
 
   const [scrollY, setScrollY] = useState(new Animated.Value(0))
-  const {user} = useAuth();
+  const {user, token, setUser} = useAuth();
+  const userController = new User();
 
   const openGallery = async () => {
     launchImageLibrary(options, response => {
-      console.log(response)
+      if(!response.didCancel){
+        const file = imgFormat(response.assets[0].uri)
+        console.log(response)
+        updatePhoto(file)
+        
+      }
     })
+  }
+
+  const updatePhoto = async (data:object) => {
+    try {
+      const response = await userController.updatePhoto(token, data);
+      if(response){
+        setUser(response)
+      }
+
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   return (
@@ -70,18 +89,18 @@ export const Settings = ({navigation, route}: Props) => {
           
           <View style={{}}>
                         
-                  <View style={st.profileImgContainer}>
-                      <Image 
-                          source={{uri: `${publicFiles}/${user.fotoPerfil}`}}
-                          style={st.profileImg} 
-                      />               
-                  </View>
-                  <TouchableOpacity
-                    onPress={() => openGallery()}
-                  >
-                    <Text>Alterar Foto...</Text>
-                  </TouchableOpacity>
-                  <Text>{user.nome} {user.sobrenome}</Text>  
+               <View style={st.profileImgContainer}>
+                <Image 
+                    source={{uri: `${publicFiles}/${user.fotoPerfil}`}}
+                    style={st.profileImg} 
+                />               
+              </View>
+              <TouchableOpacity
+                onPress={() => openGallery()}
+              >
+                <Text>Alterar Foto...</Text>
+              </TouchableOpacity>
+              <Text>{user.nome} {user.sobrenome}</Text>  
 
                 <View>
                   <TextInput

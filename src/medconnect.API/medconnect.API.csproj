@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\apiImages\NewFolder\" />
+    <Folder Include="wwwroot\users\" />
   </ItemGroup>
 
 </Project>
