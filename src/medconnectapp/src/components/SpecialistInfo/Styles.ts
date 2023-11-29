@@ -5,11 +5,14 @@ const widthScreen = Dimensions.get('window').width;
 
 export const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     width: widthScreen,
-    height: 140,
+    height: "85%",
     gap: 10,
     marginBottom: 2,
+  },
+  profInfo:{
+    flexDirection: 'row',
   },
   cardSpecImgContainer: {
     alignItems: 'center',

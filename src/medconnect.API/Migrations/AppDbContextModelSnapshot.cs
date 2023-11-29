@@ -203,6 +203,16 @@ namespace medconnect.API.Migrations
                         .HasMaxLength(350)
                         .HasColumnType("varchar(350)");
 
+                    b.Property<string>("DescricaoDetalhada")
+                        .IsRequired()
+                        .HasMaxLength(5000)
+                        .HasColumnType("varchar(5000)");
+
+                    b.Property<string>("Especialidade")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar(200)");
+
                     b.Property<string>("FotoPerfil")
                         .IsRequired()
                         .HasMaxLength(350)
@@ -221,6 +231,27 @@ namespace medconnect.API.Migrations
                     b.HasKey("EspecialistaId");
 
                     b.ToTable("Especialistas");
+                });
+
+            modelBuilder.Entity("medconnect.API.Models.ImagemPublicidade", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<Guid?>("EspecialistaId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<string>("UrlImage")
+                        .IsRequired()
+                        .HasMaxLength(350)
+                        .HasColumnType("varchar(350)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EspecialistaId");
+
+                    b.ToTable("ImagemsPublicidade");
                 });
 
             modelBuilder.Entity("medconnect.API.Models.Usuario", b =>
@@ -379,9 +410,20 @@ namespace medconnect.API.Migrations
                         .HasForeignKey("UsuarioId");
                 });
 
+            modelBuilder.Entity("medconnect.API.Models.ImagemPublicidade", b =>
+                {
+                    b.HasOne("medconnect.API.Models.Especialista", "Especialista")
+                        .WithMany("ImagemsPublicidade")
+                        .HasForeignKey("EspecialistaId");
+
+                    b.Navigation("Especialista");
+                });
+
             modelBuilder.Entity("medconnect.API.Models.Especialista", b =>
                 {
                     b.Navigation("Atendimentos");
+
+                    b.Navigation("ImagemsPublicidade");
                 });
 
             modelBuilder.Entity("medconnect.API.Models.Usuario", b =>

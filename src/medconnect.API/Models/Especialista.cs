@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace medconnect.API.Models
 {
@@ -14,5 +15,12 @@ namespace medconnect.API.Models
         [StringLength(350)]
         public string DescricaoCurta { get; set; }
 
+        [StringLength(5000)]
+        public string DescricaoDetalhada { get; set; }
+
+        [StringLength(200)]
+        public string Especialidade { get; set; }
+
+        public IEnumerable<ImagemPublicidade>? ImagemsPublicidade { get; set; }
     }
 }

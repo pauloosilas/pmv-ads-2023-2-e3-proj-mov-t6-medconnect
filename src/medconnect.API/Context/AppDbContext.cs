@@ -13,6 +13,7 @@ namespace medconnect.API.Context
         public DbSet<Atendimento> Atendimentos { get; set;}
         public DbSet<Consulta> Consultas { get; set; }
 
+        public DbSet<ImagemPublicidade> ImagemsPublicidade { get; set; }
 
         public DbSet<Usuario> UserIdentities { get; set; }
        

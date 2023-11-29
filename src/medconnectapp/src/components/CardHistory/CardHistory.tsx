@@ -23,7 +23,7 @@ export const CardHistory = ({consulta, especialista, consultas, setConsultas}: P
 
   const updateList = (response:IEspecialista) => {
     let consultas_aux = [];
-    console.table("resposta-->",response)
+    
     consultas.map(c => (
       c.especialistaId === response.especialistaId 
         ? consultas_aux.push(response) 
