@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\apiImages\\default.png"
     },
     {
+      "Id": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\docs\\client\\docteste.pdf",
+      "PackagePath": "staticwebassets\\docs\\client\\docteste.pdf"
+    },
+    {
       "Id": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\personImages\\persona01.png",
       "PackagePath": "staticwebassets\\personImages\\persona01.png"
     },
@@ -57,6 +61,10 @@
       "PackagePath": "staticwebassets\\users\\rn_image_picker_lib_temp_307d41a0-3760-4a49-9ec8-5384140ead99.png"
     },
     {
+      "Id": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\users\\rn_image_picker_lib_temp_46fa98fb-6fc9-4f6e-ba3a-f38054fa3fef.png",
+      "PackagePath": "staticwebassets\\users\\rn_image_picker_lib_temp_46fa98fb-6fc9-4f6e-ba3a-f38054fa3fef.png"
+    },
+    {
       "Id": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\users\\rn_image_picker_lib_temp_56eb4a3c-90d6-4920-a6bb-50c11e04c645.png",
       "PackagePath": "staticwebassets\\users\\rn_image_picker_lib_temp_56eb4a3c-90d6-4920-a6bb-50c11e04c645.png"
     },
@@ -77,8 +85,16 @@
       "PackagePath": "staticwebassets\\users\\rn_image_picker_lib_temp_86032602-66e4-4d6a-865d-682184b605d5.png"
     },
     {
+      "Id": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\users\\rn_image_picker_lib_temp_8d39e782-db9a-4bb6-84ce-edf8c652e1d1.png",
+      "PackagePath": "staticwebassets\\users\\rn_image_picker_lib_temp_8d39e782-db9a-4bb6-84ce-edf8c652e1d1.png"
+    },
+    {
       "Id": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\users\\rn_image_picker_lib_temp_97e99ac3-b374-495e-b746-b0f3904fd579.png",
       "PackagePath": "staticwebassets\\users\\rn_image_picker_lib_temp_97e99ac3-b374-495e-b746-b0f3904fd579.png"
+    },
+    {
+      "Id": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\users\\rn_image_picker_lib_temp_ca3f4f05-31a8-47ca-8c71-324a4a905cad.png",
+      "PackagePath": "staticwebassets\\users\\rn_image_picker_lib_temp_ca3f4f05-31a8-47ca-8c71-324a4a905cad.png"
     },
     {
       "Id": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\users\\rn_image_picker_lib_temp_d6cb20a5-d710-418a-9131-b9b439cf57f6.png",
@@ -87,6 +103,14 @@
     {
       "Id": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\users\\rn_image_picker_lib_temp_df8a5505-3aa4-4d2e-b501-8ae4c25a5b57.png",
       "PackagePath": "staticwebassets\\users\\rn_image_picker_lib_temp_df8a5505-3aa4-4d2e-b501-8ae4c25a5b57.png"
+    },
+    {
+      "Id": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\users\\rn_image_picker_lib_temp_e23173ee-c231-449a-802d-e41f350b2009.png",
+      "PackagePath": "staticwebassets\\users\\rn_image_picker_lib_temp_e23173ee-c231-449a-802d-e41f350b2009.png"
+    },
+    {
+      "Id": "E:\\Users\\Paulo\\Documents\\Projeto\\medconnect\\src\\medconnect.API\\wwwroot\\users\\rn_image_picker_lib_temp_f9a4d790-ab0e-49b1-af94-5d70aa1b66fa.png",
+      "PackagePath": "staticwebassets\\users\\rn_image_picker_lib_temp_f9a4d790-ab0e-49b1-af94-5d70aa1b66fa.png"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.medconnect.API.props",

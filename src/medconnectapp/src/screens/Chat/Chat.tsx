@@ -21,9 +21,9 @@ export const ChatScreen = () => {
     .build();
     
     
-    connection.on('ReceiveMessage', (usermail, message) => {    
-      
-      setMessages(prevMessages => [...prevMessages, {u: usermail, m:message}])
+    connection.on('ReceiveMessage', (sender, message) => {    
+      console.log(sender)
+      setMessages(prevMessages => [...prevMessages, {u: sender.email, i: sender.fotoPerfil, m:message}])
     });
 
     if(!connect)
@@ -51,7 +51,8 @@ export const ChatScreen = () => {
 
   const send = (msgValue:string) => {
       if(msgValue.length > 0){
-      connect.invoke('SendMessage', user.email , msgValue)
+      const sender = {email: user.email, fotoPerfil: user.fotoPerfil}  
+      connect.invoke('SendMessage', sender , msgValue)
         .catch((error) => {
           console.error(error);
       });
@@ -99,7 +100,7 @@ export const ChatScreen = () => {
         <>
          <View style={styles.profileImgContainer}>
               <Image 
-                  source={{uri: `${publicFiles}/${user.fotoPerfil}`}}
+                  source={{uri: `${publicFiles}/${msg.i}`}}
                   style={styles.profileImg} 
               />           
             </View>

@@ -1,8 +1,9 @@
 import Pdf from "react-native-pdf"
+import { publicFiles } from "../../../config/env";
 
 
 export const PDFFile = () => {
-    const source = { uri: 'http://samples.leanpub.com/thereactnativebook-sample.pdf', cache: true };
+    const source = { uri: `${publicFiles}/docs/client/docteste.pdf`, cache: true };
   return(
       <Pdf
         source={source}

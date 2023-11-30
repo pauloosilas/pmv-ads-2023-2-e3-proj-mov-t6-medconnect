@@ -20,6 +20,8 @@ export const CardHistory = ({consulta, especialista, consultas, setConsultas}: P
   const {token} = useAuth();
   const navigation = useNavigation() 
   
+  console.log("consulta========>",consulta.length)
+  console.log("especialista========>", especialista.length)
 
   const updateList = (response:IEspecialista) => {
     let consultas_aux = [];
@@ -74,7 +76,7 @@ export const CardHistory = ({consulta, especialista, consultas, setConsultas}: P
           </View>
             <View>
               <Text>Profissional: {especialista.nome}</Text>
-              <Text>Especialidade: {"Cirurgia Bareatrica"}</Text>
+              <Text>Especialidade: {especialista.especialidade}</Text>
               <Text>Data: {consulta.dataConsulta.split("T")[0]}</Text>
               <Text>Hora: {consulta.dataConsulta.split("T")[1]}</Text>
             </View>
@@ -100,7 +102,18 @@ export const CardHistory = ({consulta, especialista, consultas, setConsultas}: P
           )
           :
           (
-            <View><Text>Nenhuma consulta agendada...</Text></View>            
+            <View
+              style={styles.nothing}
+            >
+              <Text style={{fontSize:20}}>
+                Nenhuma consulta agendada...
+              </Text>
+              <Image 
+                 source={require("./../../assets/images/medical-checkup.png")}
+                 style={{width: 100, height: 100, opacity:0.5}}
+
+                />
+            </View>            
           )
       }
 
