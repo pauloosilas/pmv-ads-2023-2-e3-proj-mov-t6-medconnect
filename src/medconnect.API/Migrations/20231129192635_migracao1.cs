@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace medconnect.API.Migrations
 {
     /// <inheritdoc />
-    public partial class migracao01 : Migration
+    public partial class migracao1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -84,6 +84,10 @@ namespace medconnect.API.Migrations
                 {
                     EspecialistaId = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
                     DescricaoCurta = table.Column<string>(type: "varchar(350)", maxLength: 350, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    DescricaoDetalhada = table.Column<string>(type: "varchar(5000)", maxLength: 5000, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Especialidade = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Nome = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
@@ -234,7 +238,8 @@ namespace medconnect.API.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     EspecialistaId = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    DataConsulta = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                    DataConsulta = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    isAtiva = table.Column<bool>(type: "tinyint(1)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -264,6 +269,27 @@ namespace medconnect.API.Migrations
                         principalTable: "Especialistas",
                         principalColumn: "EspecialistaId",
                         onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "ImagemsPublicidade",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    EspecialistaId = table.Column<Guid>(type: "char(36)", nullable: true, collation: "ascii_general_ci"),
+                    UrlImage = table.Column<string>(type: "varchar(350)", maxLength: 350, nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ImagemsPublicidade", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ImagemsPublicidade_Especialistas_EspecialistaId",
+                        column: x => x.EspecialistaId,
+                        principalTable: "Especialistas",
+                        principalColumn: "EspecialistaId");
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -313,6 +339,11 @@ namespace medconnect.API.Migrations
                 name: "IX_Consultas_UsuarioId",
                 table: "Consultas",
                 column: "UsuarioId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ImagemsPublicidade_EspecialistaId",
+                table: "ImagemsPublicidade",
+                column: "EspecialistaId");
         }
 
         /// <inheritdoc />
@@ -340,13 +371,16 @@ namespace medconnect.API.Migrations
                 name: "Consultas");
 
             migrationBuilder.DropTable(
+                name: "ImagemsPublicidade");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "Especialistas");
+                name: "AspNetUsers");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
+                name: "Especialistas");
         }
     }
 }

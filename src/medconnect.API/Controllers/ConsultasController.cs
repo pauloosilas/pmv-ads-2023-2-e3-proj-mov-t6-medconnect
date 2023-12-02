@@ -3,6 +3,8 @@ using medconnect.API.Repository.interfaces;
 using medconnect.API.utils;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 namespace medconnect.API.Controllers;
 
@@ -43,4 +45,29 @@ public class ConsultasController : ControllerBase
                  _context.ConsultaRepository.GetGetAllByUserId(c => c.UsuarioId == userId);
         return Ok(consultas);
     }
- }
+
+    [HttpPut("{id}")]
+    public async Task<ActionResult<Consulta>> Put(string id)
+    {
+
+         Consulta consulta;
+                
+         string cId = System.Web.HttpUtility.UrlDecode(id);
+         
+         if (Guid.TryParse(cId, out Guid guid))
+         {
+          consulta = await _context.ConsultaRepository.GetById(c => c.ConsultaId == guid);
+            if (consulta != null)
+            {
+                consulta.isAtiva = false;
+                _context.ConsultaRepository.Update(consulta);
+                await _context.Commit();
+                return Ok(consulta);
+            }
+          return BadRequest("Erro na requisição...");
+         }
+         return NotFound("Consulta não encontrada");    
+    }
+
+}
+

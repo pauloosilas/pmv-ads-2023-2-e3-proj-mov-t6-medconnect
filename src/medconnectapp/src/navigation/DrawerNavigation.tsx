@@ -79,7 +79,7 @@ const Menu = ( props: DrawerContentComponentProps) => {
         </TouchableOpacity>
 
           <View style={{}}>
-              <TouchableOpacity style={styles.ItemMenu}  onPress={() => logout()}>
+              <TouchableOpacity style={styles.ItemMenu}  onPress={() => navigation.navigate("Settings")}>
                 <Icon name="settings-outline" color="#A5C3E7" size={30} />
                 <Text>Configurações</Text>
               </TouchableOpacity>

@@ -11,7 +11,7 @@ namespace medconnect.API.Repository
 
         public async Task<IEnumerable<Especialista>> GetEspecialistasAtendimentos()
         {
-            return await GetAll().Include(e => e.Atendimentos).ToListAsync();  
+            return await GetAll().Include(e => e.Atendimentos).Include(imgs => imgs.ImagemsPublicidade).ToListAsync();  
         }
     }
 }

@@ -6,6 +6,7 @@ import { AppointmentHistory,
   DashboardScreen,
   RecoverPasswordScreen, 
   SearchScreen, 
+  Settings, 
   SpecialistScreen } from "../../screens"
 import AppointmentCall from "../../../AppointmentCall";
 import { ModalFeedback } from "../../components/ModalFeedback";
@@ -32,12 +33,13 @@ export const HomeNavigation = () => {
           <Stack.Screen name="ChatScreen" component={ChatScreen} />
           <Stack.Screen name="Exames" component={Exames} />
           <Stack.Screen name="PDF" component={PDF} />
+          <Stack.Screen name="PDFFile" component={PDFFile} />
           <Stack.Screen name="Remedios" component={RemedioPage} />
          
           <Stack.Screen name="Feedback" options={{presentation: "modal" , headerShown: false}}  component={ModalFeedback} />
           <Stack.Screen name="ModalFeedback" options={{presentation: "modal" , headerShown: false}}  component={ModalFeedback} />
            
-          
+          <Stack.Screen name="Settings" component={Settings} />
   
       </Stack.Navigator>
     )
